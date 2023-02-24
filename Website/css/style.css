@@ -1,0 +1,450 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  /* ceva pentru scale */
+}
+
+body {
+  margin: 0;
+  background-color: #f5f5f5;
+  font-size: 18px;
+  font-family: "Noto Sans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 70px;
+  background-color: #fca311;
+  position: fixed;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 30px;
+  font-size: 24px;
+  z-index: 50;
+}
+
+header a {
+  color: black;
+  text-decoration: none;
+}
+
+.page-container {
+  /* vh-view heigth from page view */
+  min-height: 100vh;
+  padding-top: 70px;
+  position: relative;
+}
+main {
+  /* display:inline-block; */
+  margin: 10px 10% 60px 220px;
+  padding: 0px 25px;
+  min-height: 100vh;
+}
+
+aside {
+  width: 190px;
+  height: auto;
+  position: fixed;
+  background: linear-gradient(to bottom, #e5e5e5, #f5f5f5);
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+aside a {
+  display: block;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  /* margin-top: 20px; */
+
+  padding: 20px;
+}
+
+aside a:hover {
+  background-color: #b9b8b8;
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  height: 100px;
+  background-color: #bfbdbdbb;
+  text-align: center;
+  color: gray;
+}
+
+footer p {
+  line-height: 100px;
+}
+.logo {
+  margin-right: 5px;
+  font-size: 32px;
+}
+.logoHome {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+
+p {
+  line-height: 125%;
+  /* border-left: 4px solid #fca311;
+    padding-left: 10px; */
+}
+
+.title {
+  border-bottom: 4px solid #fca311;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  /* display: inline-block; cat textul*/
+}
+
+.intro-img {
+  display: block;
+  float: right;
+  width: 500px;
+  height: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Login */
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  margin-top: 8px;
+}
+
+.login-container p {
+  margin: 0;
+}
+
+.login-container form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  padding: 6px;
+  margin: 0;
+  font-size: 17px;
+  border: none;
+  width: 150px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+.login-container button {
+  float: right;
+  padding: 6px;
+  margin-right: 0px;
+  margin-left: 10px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background: #ccc;
+}
+
+.formular {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.formular h2 {
+  text-align: center;
+}
+
+.formular form button {
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin: 15px auto;
+  font-size: medium;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+.formular form button:hover {
+  background: #ccc;
+}
+
+.formular form label {
+  display: inline-block;
+  width: 100px;
+  padding-bottom: 5px;
+}
+
+.formular form input {
+  text-indent: 5px;
+  margin-bottom: 2px;
+  padding-bottom: 10px;
+  text-align: left;
+  font-size: medium;
+}
+
+@keyframes popupAnim {
+  0% {
+    top: -100px;
+  }
+  25% {
+    top: 0px;
+  }
+  50% {
+    top: 0px;
+  }
+  100% {
+    top: -100px;
+  }
+}
+
+.popup {
+  animation: popupAnim 5s;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+}
+
+/* Dropdown */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 110px;
+  right: 0;
+  /* box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2); */
+  border: 2px solid #fca311;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: small;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Tabel servicii 1 */
+.tabelServicii table,
+th,
+td {
+  border: 0.5px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+}
+
+.tabelServicii th,
+td {
+  padding: 5px;
+  position: relative;
+}
+
+.tabelServicii {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.tabelServicii p {
+  text-align: center;
+}
+
+.tabelServicii form button {
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin: 15px auto;
+  font-size: medium;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.tabelServicii form button:hover {
+  background: #ccc;
+}
+
+.tabelServicii form i {
+  display: none;
+  position: absolute;
+  left: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tabelServicii form input[type="checkbox"]:checked + i {
+  display: inline;
+  color: limegreen;
+}
+
+/* Tabel servicii2 fara buttoane */
+
+.tabelServicii2 table,
+th,
+td {
+  border: 0.5px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+}
+
+.tabelServicii2 th,
+td {
+  padding: 5px;
+  position: relative;
+}
+
+.tabelServicii2 {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.tabelServicii2 p {
+  text-align: center;
+}
+
+.tabelServicii2 form button {
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin: 15px auto;
+  font-size: large;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.tabelServicii2 form button:hover {
+  background: #ccc;
+}
+
+/* Button cos gunoi, are boala pe el si ii trebuie clasa */
+
+.fa-trash {
+  color: rgba(255, 0, 0, 0.753);
+}
+
+/* Tabel servicii 3 ca sunt incult si nu stiu alta varianta */
+
+.tabelServicii3 table,
+th,
+td {
+  border: 0.5px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  margin: auto;
+}
+
+.tabelServicii3 th,
+td {
+  padding: 5px;
+  position: relative;
+}
+
+.tabelServicii3 {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.tabelServicii3 p {
+  text-align: center;
+}
+
+.tabelServicii3 button {
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin: 15px auto;
+  font-size: larger;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+}
+
+.tabelServicii3 form button:hover {
+  background: #ccc;
+}
+
+.proiecteFlex {
+  display: flex;
+  flex-direction: row; /* layout the child elements in a row */
+  justify-content: flex-start; /* center the child elements horizontally */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.proiecteFlex div {
+  position: relative;
+  border: 2px solid black;
+  padding: 10px;
+  width: 200px;
+  height: 210px;
+  text-align: center;
+  background-color: #fca311;
+}
+
+.proiecteFlex div a {
+  position: absolute; /* position the element absolutely */
+  left: 0; /* align the element to the left of the container */
+  right: 0; /* align the element to the right of the container */
+  bottom: 0; /* align the element to the bottom of the container */
+  width: 100%;
+}
+
+.proiecteFlex h3 {
+  background-color: #f5f5f5;
+  text-align: center;
+  margin: -5px auto;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-size: medium;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.button:hover {
+  background: #ccc;
+}
